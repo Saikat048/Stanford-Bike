@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Login.css'
 
 const Login = () => {
@@ -19,9 +20,11 @@ const Login = () => {
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" placeholder="Password" required />
-                        </Form.Group>
+                        </Form.Group> <p>New to Stanford Bike? <Link to="/signup">Please Sign Up</Link></p>
+
+                        <button className='btn btn-link'>Forgot password?</button> <br />
                         <Button variant="primary" type="submit">
-                            Submit
+                            Log In
                         </Button>
                     </Form>
                 </div>
