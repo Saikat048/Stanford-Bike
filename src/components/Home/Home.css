@@ -1,0 +1,14 @@
+.carousel-item::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1; 
+}
+
+.image {
+    height: 80vh;
+}
