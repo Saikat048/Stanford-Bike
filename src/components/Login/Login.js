@@ -4,8 +4,8 @@ import './Login.css'
 
 const Login = () => {
     return (
-        <div className='container '>
-            <div className='row justify-content-center align-items-center'>
+        <div className='container'>
+            <div className='row justify-content-md-center align-items-center'>
                 <div className='mt-5 col-md-5 col-lg-5'>
                     <img className='img-fluid  img' src="https://us.123rf.com/450wm/jirsak/jirsak1707/jirsak170700007/82255755-cybersecurity-and-information-technology-security-services-concept-login-or-sign-in-internet-concept.jpg?ver=6" alt="" />
                 </div>
