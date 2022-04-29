@@ -27,3 +27,24 @@ a {
     font-size: 30px;
     margin-left: 15px;
 }
+
+
+
+@media all and (max-width: 992px) {
+    .footer-container {
+        color: #FFFFFF;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+    }
+    img {
+        display: block;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .footer-container {
+        color: #FFFFFF;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}

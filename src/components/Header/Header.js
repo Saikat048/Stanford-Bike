@@ -20,10 +20,11 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
                             <CustomLink className='text-decoration-none me-3' to='/home'>Home</CustomLink>
-                            <CustomLink className='text-decoration-none' to='/inventory'>Inventory</CustomLink>
+                            <CustomLink className='text-decoration-none me-3' to='/inventory'>Inventory</CustomLink>
+                            <CustomLink className='text-decoration-none me-3' to='/blogs'>Blogs</CustomLink> 
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#deets">More deets</Nav.Link> 
+                            <Nav.Link href="#deets">More deets</Nav.Link>
                            {
                                user ?  <CustomLink onClick={handleLogOut} className='text-decoration-none' to='/login'>Log Out</CustomLink>
                                : 
