@@ -1,9 +1,11 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import useProducts from '../Hooks/Customhook';
+import InventoryProduct from '../InventoryProduct/InventoryProduct';
 import './Home.css'
 
-const Home = () => { 
+const Home = () => {
+    const [items] = useProducts();
     return (
         <div>
             <div>
@@ -44,8 +46,15 @@ const Home = () => {
                 </Carousel>
             </div>
 
-            <div> 
-                
+            <div>
+                <h1>Items</h1>
+                <div className="container">
+                    <div className="cards">
+                        {
+                            items.slice(0, 3).map(item => <InventoryProduct item={item}></InventoryProduct>)
+                        }
+                    </div>
+                </div>
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
 import React from 'react';
 import useProducts from '../Hooks/Customhook';
 import InventoryProduct from '../InventoryProduct/InventoryProduct';
-import './Inventory.css';
+import './Inventory.css'
 
 const Inventory = () => {
     const [items] = useProducts();

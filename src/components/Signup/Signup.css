@@ -1,0 +1,19 @@
+.form {
+    background:#abedec;
+    padding: 50px; 
+    border-radius: 15px;
+    width: 400px; 
+}
+.img {
+    height: 300px;
+}
+
+
+@media all and (max-width: 576px) {
+   .form { 
+       padding: 30px; 
+       border-radius: 15px;
+       width: 300px; 
+       margin: auto;
+   }
+}
