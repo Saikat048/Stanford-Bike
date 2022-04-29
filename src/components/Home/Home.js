@@ -82,7 +82,33 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div></div>
+            </div>
+            <div>
+                <div className="container">
+                    <h1>Suzuki Care</h1>
+                    <div className='svg-photo'>
+                        <div className='border p-5'>
+                            <img className='w-100' src="https://2d5cd3.hostroomcdn.com/wp-content/uploads/2020/02/finance.svg" alt="" />
+                            <h1>
+                                Suzuki Finance
+                            </h1>
+                            <p>A finance experience for your Suzuki lifestyle. Flexible, hassle-free solutions tailored to your needs. On the road today, financial freedom tomorrow.</p>
+                        </div>
+                        <div className='border p-5'>
+                            <img className='w-100' src="https://2d5cd3.hostroomcdn.com/wp-content/uploads/2020/02/insurance.svg" alt="" />
+                            <h1>Suzuki Insurance
+                            </h1>
+                            <p>Protection for every rider, and every motorcycle. Competitive insurance for your needs on or off-road, at the right price. Gear up with peace of mind.</p>
+                        </div>
+                        <div className='border p-5'>
+                            <img className='w-100' src="https://2d5cd3.hostroomcdn.com/wp-content/uploads/2020/02/roadside.svg" alt="" />
+                            <h1>
+                                Roadside Assistance
+                            </h1>
+                            <p>No matter where you are, no matter when. Roadside assistance from the people who know you and know your Suzuki. Support for when you need it the most.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

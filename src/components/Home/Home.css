@@ -25,8 +25,18 @@
 }
 .icon { 
     margin-left: 20px;
+} 
+.svg-photo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
+@media all and (max-width: 992px) {
+    .svg-photo {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 @media all and (max-width: 768px) {
     .photo {
@@ -34,6 +44,10 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
         width: 500px;
+    }
+    .svg-photo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -44,5 +58,9 @@
         grid-template-columns: repeat(1, 1fr);
         gap: 10px;
         width: 500px;
+    }
+    .svg-photo {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
