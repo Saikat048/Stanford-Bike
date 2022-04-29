@@ -1,4 +1,3 @@
-
   
 .form {
      background:#abedec;
@@ -8,6 +7,12 @@
  }
  .img {
      height: 300px;
+ }
+ .error {
+     font-size: 40px; 
+     display: flex; 
+     justify-content: center;
+     align-items: center;
  }
 
 
