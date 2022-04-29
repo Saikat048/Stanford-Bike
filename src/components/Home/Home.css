@@ -13,3 +13,36 @@
     height: 80vh;
 }
  
+.photo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 500px;
+}
+.icons {
+    font-size: 30px;
+    margin-right: 10px;
+}
+.icon { 
+    margin-left: 20px;
+}
+
+
+@media all and (max-width: 768px) {
+    .photo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 500px;
+    }
+}
+
+
+@media all and (max-width: 576px) {
+    .photo {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        width: 500px;
+    }
+}

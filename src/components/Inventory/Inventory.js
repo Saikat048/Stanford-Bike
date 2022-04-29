@@ -1,13 +1,13 @@
 import React from 'react';
 import useProducts from '../Hooks/Customhook';
 import InventoryProduct from '../InventoryProduct/InventoryProduct';
-import './Inventory.css'
+import './Inventory.css';
 
 const Inventory = () => {
     const [items] = useProducts();
     return (
         <div className='container'>
-            <div className="row cards">
+            <div className="cards">
                 {
                     items.map(item => <InventoryProduct item={item}></InventoryProduct>)
                 }
