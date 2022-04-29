@@ -23,10 +23,15 @@ const Header = () => {
                             <CustomLink className='text-decoration-none me-3' to='/inventory'>Inventory</CustomLink>
                             <CustomLink className='text-decoration-none me-3' to='/blogs'>Blogs</CustomLink> 
                         </Nav>
-                        <Nav>
-                            <Nav.Link href="#deets">More deets</Nav.Link>
+                        <Nav> 
                            {
-                               user ?  <CustomLink onClick={handleLogOut} className='text-decoration-none' to='/login'>Log Out</CustomLink>
+                               user ?  [
+                                   <CustomLink className='text-decoration-none me-3' to='/manageitem'>Manage Items</CustomLink>,
+                                   <CustomLink className='text-decoration-none me-3' to='/additem'>Add Item</CustomLink>,
+                                   <CustomLink className='text-decoration-none me-3' to='/myitem'>My Items</CustomLink>,
+                                   <CustomLink onClick={handleLogOut} className='text-decoration-none me-3' to='/login'>Log Out</CustomLink>,
+                            
+                            ]
                                : 
                                <CustomLink className='text-decoration-none' to='/login'>Log in</CustomLink>
                                

@@ -53,7 +53,7 @@ const Home = () => {
                 <div className="container">
                     <div className="cards">
                         {
-                            items.slice(0, 3).map(item => <InventoryProduct item={item}></InventoryProduct>)
+                            items.slice(0, 6).map(item => <InventoryProduct item={item}></InventoryProduct>)
                         }
                     </div>
                 </div>
