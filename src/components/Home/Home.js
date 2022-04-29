@@ -3,8 +3,7 @@ import { Carousel } from 'react-bootstrap';
 import useProducts from '../Hooks/Customhook';
 import './Home.css'
 
-const Home = () => {
-    const [product] = useProducts(); 
+const Home = () => { 
     return (
         <div>
             <div>
@@ -45,8 +44,7 @@ const Home = () => {
                 </Carousel>
             </div>
 
-            <div>
-                <h1>Services: {product.length}</h1>
+            <div> 
                 
             </div>
         </div>
