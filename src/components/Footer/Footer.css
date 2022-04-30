@@ -47,4 +47,9 @@ a {
         display: grid;
         grid-template-columns: repeat(1, 1fr); 
     }
+    .media {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
 }

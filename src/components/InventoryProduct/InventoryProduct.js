@@ -1,10 +1,10 @@
-import React from 'react';
-import { Card } from 'react-bootstrap';
+import React from 'react'; 
 import './InventoryProduct.css'
 
-const InventoryProduct = (props) => {
-    console.log(props)
-    const {name, img, description, price, quantity, supplier} = props.item;
+const InventoryProduct = (props) => { 
+    // console.log(props)
+    const {name, img, price} = props.item;
+ 
     return (
         <div>
             <div className="card shadow-sm m-3 bg-body rounded">

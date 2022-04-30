@@ -21,6 +21,7 @@ const Header = () => {
                         <Nav className="mx-auto">
                             <CustomLink className='text-decoration-none me-3' to='/home'>Home</CustomLink>
                             <CustomLink className='text-decoration-none me-3' to='/inventory'>Inventory</CustomLink>
+                            <CustomLink className='text-decoration-none me-3' to='/inventory/:inventoryId'>Details</CustomLink>
                             <CustomLink className='text-decoration-none me-3' to='/blogs'>Blogs</CustomLink> 
                         </Nav>
                         <Nav> 

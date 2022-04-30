@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
+import { BsGoogle } from 'react-icons/bs';
 import './Login.css'
 
 const Login = () => {
@@ -78,10 +79,10 @@ return (
     <div className='container'>
         <div className='row justify-content-md-center align-items-center'>
             <div className='mt-5 col-md-5 col-lg-5'>
-                <img className='img-fluid  img' src="https://us.123rf.com/450wm/jirsak/jirsak1707/jirsak170700007/82255755-cybersecurity-and-information-technology-security-services-concept-login-or-sign-in-internet-concept.jpg?ver=6" alt="" />
+                <img className='img-fluid img' src="https://us.123rf.com/450wm/jirsak/jirsak1707/jirsak170700007/82255755-cybersecurity-and-information-technology-security-services-concept-login-or-sign-in-internet-concept.jpg?ver=6" alt="" />
             </div>
             <div className=' col-md-7 col-lg-7'>
-                <Form onSubmit={handleSubmit} className='mt-5 form form-control'>
+                <Form onSubmit={handleSubmit} className='mt-5 form form-control mx-auto'>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" required />
@@ -93,13 +94,13 @@ return (
                     </Form.Group> <p>New to Stanford Bike? <Link to="/signup">Please Sign Up</Link></p>
 
 
-                    <button onClick={handleResetPassword} className='btn btn-link'>Forgot password?</button> <br />
+                    <button onClick={handleResetPassword} className='btn btn-link mb-3'>Forgot password?</button> <br />
                     <Button variant="primary" type="submit">
                         Log In
                     </Button>
                 </Form>
                 <ToastContainer />
-                <button onClick={handleGoogleSignIn}>Sign In Google</button>
+                <Button className='d-flex mx-auto mt-3'  variant="primary" type="submit" onClick={handleGoogleSignIn}><span className='me-2'><BsGoogle></BsGoogle></span> Sign In With Google</Button>
             </div>
         </div>
     </div>
