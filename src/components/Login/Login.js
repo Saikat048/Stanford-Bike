@@ -1,3 +1,4 @@
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -10,6 +11,8 @@ import './Login.css'
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [users, setUsers] = useState('');
+    const [error, setError] = useState('');
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -52,6 +55,24 @@ const Login = () => {
       if (sending) {
         return <h1 className='text-center mt-5'>Sending...</h1>;
       }
+ 
+      const provider = new GoogleAuthProvider();
+
+      if(users){
+          navigate('/home')
+      } 
+      const handleGoogleSignIn = () => {
+          signInWithPopup(auth, provider)
+          .then(result => {
+            const user = result.user;
+            setUsers(user);
+          })
+          .catch(error => {
+            setError(error);
+          })
+      }
+      
+
 
 return (
     <div className='container'>
@@ -78,6 +99,7 @@ return (
                     </Button>
                 </Form>
                 <ToastContainer />
+                <button onClick={handleGoogleSignIn}>Sign In Google</button>
             </div>
         </div>
     </div>
