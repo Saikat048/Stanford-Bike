@@ -2,8 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Additem from './components/Additem/Additem';
 import Blogs from './components/Blogs/Blogs';
-import Error from './components/Error/Error';
-import Footer from './components/Footer/Footer';
+import Error from './components/Error/Error'; 
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Inventory from './components/Inventory/Inventory';
@@ -22,9 +21,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
 
-        <Route path='/inventory' element={<RequireAuth>
-          <Inventory></Inventory>
-        </RequireAuth>}></Route>
+        <Route path='/inventory' element={<Inventory></Inventory>}></Route>
 
         <Route path='/inventory/:inventoryId' element={<RequireAuth>
           <ShowDetail></ShowDetail>
@@ -46,8 +43,7 @@ function App() {
         <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/*' element={<Error></Error>}></Route>
-      </Routes>
-      <Footer></Footer>
+      </Routes> 
     </div>
   );
 }

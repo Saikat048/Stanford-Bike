@@ -56,11 +56,14 @@ const Login = () => {
       if (sending) {
         return <h1 className='text-center mt-5'>Sending...</h1>;
       }
+
+
+      
  
       const provider = new GoogleAuthProvider();
 
       if(users){
-          navigate('/home')
+        navigate(from, { replace: true })
       } 
       const handleGoogleSignIn = () => {
           signInWithPopup(auth, provider)

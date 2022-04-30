@@ -5,6 +5,9 @@ import InventoryProduct from '../InventoryProduct/InventoryProduct';
 import './Home.css';
 import { BsFacebook } from 'react-icons/bs';
 import { AiFillInstagram } from 'react-icons/ai';
+import { BsArrowRightCircleFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+import Footer from '../Footer/Footer'
 
 const Home = () => {
     const [items] = useProducts();
@@ -56,6 +59,7 @@ const Home = () => {
                             items.slice(0, 6).map(item => <InventoryProduct key={item._id} item={item}></InventoryProduct>)
                         }
                     </div>
+                    <Link to='/inventory'>See More Inventorys <span className='ms-2'><BsArrowRightCircleFill></BsArrowRightCircleFill></span></Link>   
                 </div>
             </div>
             <div>
@@ -71,6 +75,7 @@ const Home = () => {
                             <div><img className="w-100" src="https://scontent.cdnsnapwidget.com/vp/7fde87ae317b8cf22b12ea5efacde588/5E1A7986/t51.2885-15/e35/s320x320/69388391_379907252937119_695707368907141271_n.jpg" alt="" /></div>
                             <div><img className="w-100" src="https://scontent.cdnsnapwidget.com/vp/ec4bd6dc09f46b0f327de030d730d7df/5E194D5E/t51.2885-15/e35/s320x320/69122606_511655879392394_3301552035478794855_n.jpg" alt="" /></div>
                             <div><img className="w-100" src="https://scontent.cdnsnapwidget.com/vp/5828cef16cafdbc22168aef6d3bbc832/5E3937BF/t51.2885-15/e35/s320x320/68664807_176661040122236_2394840165104772818_n.jpg" alt="" /></div>
+                           
                         </div>
                         <div className='col-6'>
                             <h1>Welcome to Philadelphia Cycle Center</h1>
@@ -110,6 +115,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

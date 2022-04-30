@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer/Footer';
 import './Blogs.css'
 
 const Blogs = () => {
@@ -22,6 +23,7 @@ const Blogs = () => {
                 <h4><b>Question-4</b>: What is the purpose of JWT and how does it work...?</h4>
                 <p><b>Answer :</b> JWT, or JSON Web Token, is an open standard used to share security information between two parties — a client and a server. Each JWT contains encoded JSON objects, including a set of claims. JWTs are signed using a cryptographic algorithm to ensure that the claims cannot be altered after the token is issued.</p>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
