@@ -1,4 +1,12 @@
 .blogs {
     background: #c1e6f1;
-    padding: 50px 250px;
+    padding: 50px 250px; 
+}
+
+
+@media all and (max-width: 576px) {
+    .blogs { 
+        text-align: center;
+        padding: 30px 50px;
+    }
 }

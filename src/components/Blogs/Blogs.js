@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../Footer/Footer';
-import './Blogs.css'
+import './Blogs.css';
 
 const Blogs = () => {
     return (
