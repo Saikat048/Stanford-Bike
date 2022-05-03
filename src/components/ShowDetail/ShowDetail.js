@@ -19,29 +19,34 @@ const ShowDetail = () => {
 
     }, [])
 
-    const [quantity, setQuantity] = useState([]);
+    // const [quantity, setQuantity] = useState([]);
 
-    const delivered = () => {
-        if (quantity <= 0) {
-            alert('no product');
-            return;
-        }
-        const productDelivered = (quantity - 1);
-        setQuantity(productDelivered);
-    }
-
- 
     const handleSubmit = event => {
         event.preventDefault();
-        const number = event.target.text.value;
+        const number = event.target.number.value;
         if (number <= 0) {
             alert('Not A valid Number');
-            event.target.reset(); 
+            event.target.reset();
             return;
         }
-        const addToNumber = quantity + parseInt(number);
-        setQuantity(addToNumber); 
-        event.target.reset(); 
+        const update = parseInt({number})
+        const url = `http://localhost:5000/products/${inventoryId}`;
+
+
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(update),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+            })
+    //     const addToNumber = quantity + parseInt(number);
+    //     setQuantity(addToNumber);
+    //     event.target.reset();
     }
  
 
@@ -55,10 +60,10 @@ const ShowDetail = () => {
 
                         <Form onSubmit={handleSubmit}>
                             <Form.Group className="mb-3 mt-5" controlId="formBasicEmail">
-                                <Form.Control type="number" placeholder="Add Quantity" name='text' required/>
+                                <Form.Control type="number" placeholder="Add Quantity" name='number' required/>
                             </Form.Group> 
                            <Button variant="primary" type="submit">Add</Button>
-                        <Button className='ms-3 ' onClick={delivered} variant="primary">Delivered</Button> 
+                        <Button className='ms-3 '  variant="primary">Delivered</Button> 
                         </Form>
                     </Card>
 
