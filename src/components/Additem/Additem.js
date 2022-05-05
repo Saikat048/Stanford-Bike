@@ -1,17 +1,20 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import useProducts from '../Hooks/Customhook';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Additem = () => {
 
-    const [products, setProducts] = useProducts()
+    const [products, setProducts] = useProducts();
+
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        
+
         const url = `http://localhost:5000/products`;
         fetch(url, {
-            method: 'POST', // or 'PUT'
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -19,7 +22,11 @@ const Additem = () => {
         })
             .then(response => response.json())
             .then(data => {
-                setProducts(data);
+                console.log(data)
+                if (data) {
+                    toast('added')
+                    setProducts(data);
+                }
             })
     }
 
@@ -35,6 +42,7 @@ const Additem = () => {
                 <input className='mb-2' placeholder='Price' type="price" {...register("price",)} />
                 <input type="submit" />
             </form>
+            <ToastContainer />
         </div>
     );
 };

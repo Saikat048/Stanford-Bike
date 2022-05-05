@@ -27,7 +27,7 @@ function App() {
           <ShowDetail></ShowDetail>
         </RequireAuth>}></Route>
 
-        <Route path='/myitem' element={<RequireAuth>
+        <Route path='/myitem/' element={<RequireAuth>
           <Myitem></Myitem>
         </RequireAuth>}></Route>
 

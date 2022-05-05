@@ -8,7 +8,7 @@ const Inventory = () => {
     const [items] = useProducts();
     return (
         <div>
-            <div className='container'>
+            <div className='container mb-5'>
                 <div className="cards">
                     {
                         items.map(item => <InventoryProduct key={item._id} item={item}></InventoryProduct>)

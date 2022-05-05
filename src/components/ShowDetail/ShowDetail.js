@@ -23,32 +23,30 @@ const ShowDetail = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        const number = event.target.number.value;
-        if (number <= 0) {
-            alert('Not A valid Number');
-            event.target.reset();
-            return;
-        }
-        const update = parseInt({number})
-        const url = `http://localhost:5000/products/${inventoryId}`;
+        const number = parseInt(event.target.number.value);
+        // if (number <= 0) {
+        //     alert('Not A valid Number');
+        //     event.target.reset();
+        //     return;
+        // }
+        const quantity = { number };
 
+        const url = `http://localhost:5000/products/${inventoryId}`;
 
         fetch(url, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(update),
+            body: JSON.stringify(quantity),
         })
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
             })
-    //     const addToNumber = quantity + parseInt(number);
-    //     setQuantity(addToNumber);
-    //     event.target.reset();
+
     }
- 
+
 
     return (
         <div>
@@ -60,10 +58,10 @@ const ShowDetail = () => {
 
                         <Form onSubmit={handleSubmit}>
                             <Form.Group className="mb-3 mt-5" controlId="formBasicEmail">
-                                <Form.Control type="number" placeholder="Add Quantity" name='number' required/>
-                            </Form.Group> 
-                           <Button variant="primary" type="submit">Add</Button>
-                        <Button className='ms-3 '  variant="primary">Delivered</Button> 
+                                <Form.Control type="number" placeholder="Add Quantity" name='number' required />
+                            </Form.Group>
+                            <Button variant="primary" type="submit">Add</Button>
+                            <Button className='ms-3 ' variant="primary">Delivered</Button>
                         </Form>
                     </Card>
 

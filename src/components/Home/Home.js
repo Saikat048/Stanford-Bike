@@ -13,7 +13,7 @@ const Home = () => {
     const [items] = useProducts();
     return (
         <div>
-            <div>
+            <div className='mb-5'>
                 <Carousel>
                     <Carousel.Item interval={1000}>
                         <img
@@ -51,19 +51,30 @@ const Home = () => {
                 </Carousel>
             </div>
 
-            <div>
-                <h1>Items</h1>
+
+            {/* Items  */}
+
+            <div className='items'>
+                <h1 className='text-center fw-bold'>Items</h1>
+                <hr className='hr' />
                 <div className="container">
                     <div className="cards">
                         {
                             items.slice(0, 6).map(item => <InventoryProduct key={item._id} item={item}></InventoryProduct>)
                         }
-                    </div>
-                    <Link to='/inventory'>See More Inventorys <span className='ms-2'><BsArrowRightCircleFill></BsArrowRightCircleFill></span></Link>   
+                    </div> 
+                        <Link className='fw-bold ' to='/inventory'>See More Items <span className='ms-2'><BsArrowRightCircleFill></BsArrowRightCircleFill></span></Link>
+                   
                 </div>
             </div>
+
+
+            {/* Bike Center  */}
+
             <div>
-                <div className="container">
+                <div className="container items">
+                        <h1 className='text-center fw-bold'>Bike Center</h1>
+                        <hr className='hr w-25 mb-5' />
                     <div className='row justify-content-around align-items-center'>
                         <div className='col-6 photo'>
                             <div><img className="w-100" src="https://scontent.cdnsnapwidget.com/vp/75d8eba0ae916b00d4cd8512e8fb3396/5E33C80A/t51.2885-15/e35/s320x320/69951229_2458583207560204_8041728927736586474_n.jpg" alt="" /></div>
@@ -75,10 +86,10 @@ const Home = () => {
                             <div><img className="w-100" src="https://scontent.cdnsnapwidget.com/vp/7fde87ae317b8cf22b12ea5efacde588/5E1A7986/t51.2885-15/e35/s320x320/69388391_379907252937119_695707368907141271_n.jpg" alt="" /></div>
                             <div><img className="w-100" src="https://scontent.cdnsnapwidget.com/vp/ec4bd6dc09f46b0f327de030d730d7df/5E194D5E/t51.2885-15/e35/s320x320/69122606_511655879392394_3301552035478794855_n.jpg" alt="" /></div>
                             <div><img className="w-100" src="https://scontent.cdnsnapwidget.com/vp/5828cef16cafdbc22168aef6d3bbc832/5E3937BF/t51.2885-15/e35/s320x320/68664807_176661040122236_2394840165104772818_n.jpg" alt="" /></div>
-                           
+
                         </div>
                         <div className='col-6'>
-                            <h1>Welcome to Philadelphia Cycle Center</h1>
+                            <h1 className='bike'>Welcome to STANFORD BIKE Center</h1>
                             <div>
                                 <a className='text-decoration-none' href="#"><span className='icons'><BsFacebook></BsFacebook></span>FaceBook</a>
                                 <a className='text-decoration-none' href="#"><span className='icons icon'><AiFillInstagram></AiFillInstagram></span>Instagram</a>
@@ -88,9 +99,14 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+
+            {/* Suzuki Care  */}
+
             <div>
                 <div className="container">
-                    <h1>Suzuki Care</h1>
+                    <h1 className='text-center fw-bold'>Suzuki Care</h1>
+                    <hr className='hr w-25 mb-5' />
                     <div className='svg-photo'>
                         <div className='border p-5'>
                             <img className='w-100' src="https://2d5cd3.hostroomcdn.com/wp-content/uploads/2020/02/finance.svg" alt="" />
@@ -115,6 +131,8 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Footer  */}
             <Footer></Footer>
         </div>
     );

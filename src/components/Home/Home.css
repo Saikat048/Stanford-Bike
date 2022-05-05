@@ -12,7 +12,16 @@
 .image {
     height: 80vh;
 }
- 
+.hr {
+    border: 3px solid blue;
+    width: 120px;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+ .items {
+     margin-bottom: 70px;
+ }
 .photo {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -35,6 +44,9 @@
     .svg-photo {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+    }
+    .bike {
+        margin-top: 50px;
     }
 }
 
