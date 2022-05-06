@@ -40,6 +40,7 @@ const Additem = () => {
                 <textarea className='mb-2' placeholder='Description' {...register("description",)} />
                 <input className='mb-2' placeholder='Photo URL' type="text" {...register("img",)} />
                 <input className='mb-2' placeholder='Price' type="price" {...register("price",)} />
+                <input className='mb-2' placeholder='Supplier Name' type="text" {...register("supplier",)} />
                 <input type="submit" />
             </form>
             <ToastContainer />
