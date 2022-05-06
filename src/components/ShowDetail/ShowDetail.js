@@ -11,7 +11,7 @@ const ShowDetail = () => {
     // console.log(product)
 
     useEffect(() => {
-        const url = `http://localhost:5000/products/${inventoryId}`;
+        const url = `https://blooming-refuge-59284.herokuapp.com/products/${inventoryId}`;
 
         fetch(url)
             .then(res => res.json())
@@ -31,7 +31,7 @@ const ShowDetail = () => {
         // }
         const quantity = { number };
 
-        const url = `http://localhost:5000/products/${inventoryId}`;
+        const url = `https://blooming-refuge-59284.herokuapp.com/products/${inventoryId}`;
 
         fetch(url, {
             method: 'PUT',

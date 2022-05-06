@@ -17,51 +17,29 @@ const InventoryProduct = (props) => {
  
 
 
-    // const handleDelete = id => {
-    //     // console.log(id)
-    //     const proceed = window.confirm('Are you sure, You want to delete...?')
-    //     if (proceed) {
-    //         console.log(id)
-    //         const url = `http://localhost:5000/products/${id}`;
-    //         fetch(url, {
-    //             method: 'DELETE', // or 'PUT'
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //             }, 
-    //         })
-    //             .then(response => response.json())
-    //             .then(data => {
-    //                if(data.deletedCount > 0) {
-    //                  const remaining = products.filter(product => product._id !== id)
-    //                  setProducts(remaining)
-    //                }
-    //             })
-    //     }
-    // }
-
-    const handleDelete = product => {
-        console.log(product)
-  
-
-
-        //   const url = `http://localhost:5000/products`;
-        // fetch(url, {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify(data),
-        // })
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         console.log(data)
-        //         if (data) {
-        //             toast('added')
-        //             setProducts(data);
-        //         }
-        //     })
-        
+    const handleDelete = id => {
+        // console.log(id)
+        const proceed = window.confirm('Are you sure, You want to delete...?')
+        if (proceed) {
+            console.log(id)
+            const url = `https://blooming-refuge-59284.herokuapp.com/products/${id}`;
+            fetch(url, {
+                method: 'DELETE', // or 'PUT'
+                headers: {
+                    'Content-Type': 'application/json',
+                }, 
+            })
+                .then(response => response.json())
+                .then(data => {
+                   if(data.deletedCount > 0) {
+                     const remaining = products.filter(product => product._id !== id)
+                     setProducts(remaining)
+                   }
+                })
+        }
     }
+
+   
     return (
         <div>
             <div className="card shadow-sm m-3 bg-body rounded">

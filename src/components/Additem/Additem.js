@@ -12,7 +12,7 @@ const Additem = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
 
-        const url = `http://localhost:5000/products`;
+        const url = `https://blooming-refuge-59284.herokuapp.com/products`;
         fetch(url, {
             method: 'POST',
             headers: {
