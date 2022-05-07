@@ -9,7 +9,7 @@ const Additem = () => {
 
     const [products, setProducts] = useProducts();
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
         const url = `https://blooming-refuge-59284.herokuapp.com/products`;
@@ -26,6 +26,7 @@ const Additem = () => {
                 if (data) {
                     toast('added')
                     setProducts(data);
+                    reset();
                 }
             })
     }

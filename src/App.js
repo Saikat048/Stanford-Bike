@@ -6,12 +6,11 @@ import Error from './components/Error/Error';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Inventory from './components/Inventory/Inventory';
-import Login from './components/Login/Login';
-import Manageitem from './components/Manageitem/Manageitem';
+import Login from './components/Login/Login'; 
 import Myitem from './components/Myitem/Myitem';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import ShowDetail from './components/ShowDetail/ShowDetail';
-import Signup from './components/Signup/Signup';
+import Signup from './components/Signup/Signup'; 
 
 function App() {
   return (
@@ -30,11 +29,7 @@ function App() {
         <Route path='/myitem/' element={<RequireAuth>
           <Myitem></Myitem>
         </RequireAuth>}></Route>
-
-        <Route path='/manageitem' element={<RequireAuth>
-          <Manageitem></Manageitem>
-        </RequireAuth>}></Route>
-
+ 
         <Route path='/additem' element={<RequireAuth>
           <Additem></Additem>
         </RequireAuth>}></Route>
