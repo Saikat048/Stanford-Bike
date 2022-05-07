@@ -1,20 +1,37 @@
-import React, { useEffect, useState } from 'react';   
-import Table from '../Table/Table';
+    
+import useItems from '../Hooks/Itemshook';
+import TableData from '../TableData/TableData';
 
 const Myitem = () => {
-    const [items, setItems] = useState([]);
-    console.log(items)
+    const [items, setItems] = useItems();
+    
+    const handleDelete = id => {
+        // console.log(id) 
+        const proceed = window.confirm('Are you sure, You want to delete...?')
+        if (proceed) {
+            console.log(id)
+            const url = `https://blooming-refuge-59284.herokuapp.com/item/${id}`;
+            fetch(url, {
+                method: 'DELETE', // or 'PUT'
+                headers: {
+                    'Content-Type': 'application/json',
+                }, 
+            })
+                .then(response => response.json())
+                .then(data => {
+                   if(data.deletedCount > 0) {
+                     const remaining = items.filter(product => product._id !== id)
+                     setItems(remaining)
+                   }
+                })
+        }
+    }
 
-    useEffect(() => {
-        fetch('https://blooming-refuge-59284.herokuapp.com/item')
-            .then(res => res.json())
-            .then(data => setItems(data))
-    }, [])
-
+   
     return (
-        <div>
+        <div> 
              {
-                 items.map(item => <Table key={item._id} item={item}></Table>)
+                 items.map(item => <TableData key={item._id} item={item} handleDelete={handleDelete}></TableData>)
              }
         </div>
     );
