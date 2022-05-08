@@ -21,6 +21,9 @@
         padding: 30px; 
         border-radius: 15px;
         width: 300px; 
-        margin: auto;
+        margin: auto; 
+    }
+    .google-btn {
+        margin-bottom: 40px;
     }
  }

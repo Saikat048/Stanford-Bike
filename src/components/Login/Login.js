@@ -105,7 +105,7 @@ return (
                     </Button>
                 </Form>
                 <ToastContainer />
-                <Button className='d-flex mx-auto mt-3'  variant="primary" type="submit" onClick={handleGoogleSignIn}><span className='me-2'><BsGoogle></BsGoogle></span> Sign In With Google</Button>
+                <Button className='d-flex mx-auto mt-3 google-btn'  variant="primary" type="submit" onClick={handleGoogleSignIn}><span className='me-2'><BsGoogle></BsGoogle></span> Sign In With Google</Button>
             </div>
         </div>
     </div>
