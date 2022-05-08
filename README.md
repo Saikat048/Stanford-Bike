@@ -3,6 +3,10 @@
 Live Web Site
 ## https://assignment-11-894b0.web.app
 
+
+### Description 
+Aei website ta ekta bike related website. Ki vabe website A bike er details dekha dey, pochondo moto bike select kora jay, proyojone bike details delete ooo kora jay abar bike stock kora jay, bike add kora jay A golo eee aei website A dekhano hoyeche.
+
 ## Assalamu Alaikum Admin/Moderator
 - Prothome create react app diye ekta react app create korchi. kicu components create korchi. 
 - App.js file A router set korchi. ekta header create korchi, header A link golo set korchi. Home page A carousel + item section + extra 2 ta section (bike center, suzuki care) + footer.
