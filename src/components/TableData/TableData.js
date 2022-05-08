@@ -2,7 +2,7 @@
 import { Button, Card } from 'react-bootstrap';  
 
 const TableData = (props) => {
-    console.log(props) 
+    // console.log(props) 
     const {item, handleDelete} = props;
     const { name, _id, price, quantity, supplier } = item;
  

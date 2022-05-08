@@ -22,7 +22,7 @@ const Additem = () => {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 if (data) {
                     toast('added')
                     setProducts(data);

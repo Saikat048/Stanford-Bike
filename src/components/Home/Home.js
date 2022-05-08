@@ -21,9 +21,9 @@ const Home = () => {
                             src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YmlrZXxlbnwwfHwwfHw%3D&w=1000&q=80"
                             alt="First slide"
                         />
-                        <Carousel.Caption>
-                            <h3>FAST & FURIOUS</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <Carousel.Caption className='mb-5 px-5'>
+                            <h3 className='mb-4 fw-bold'>FAST & FURIOUS</h3>
+                            <p>We are really proud to announce the launch of a completely new motorcycle from Suzuki’s stable, the “INTRUDER ABS Fi”! The Modern Cruiser Intruder offers a perfect combination of modern styling, features and performance.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item interval={500}>
@@ -32,9 +32,9 @@ const Home = () => {
                             src="https://cdn.luxe.digital/media/20220130151633/best-electric-motorcycles-2022-lightning-ls-218-luxe-digital-1-780x520.jpg"
                             alt="Second slide"
                         />
-                        <Carousel.Caption>
-                            <h3>ELECTRIC MOTORCYCLE</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <Carousel.Caption className='mb-5 px-5'>
+                            <h3 className='mb-4 fw-bold'>ELECTRIC MOTORCYCLE</h3>
+                            <p>The premium looking ELECTRIC MOTORCYCLE EP is a more economical 110 CC motorbike which has been developed in the same wind-tunnel where the legendary Hayabusa, GSX-R and MotoGP machines are developed. </p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -43,9 +43,9 @@ const Home = () => {
                             src="https://5.imimg.com/data5/SELLER/Default/2021/1/KD/NQ/ZW/66703089/side-golden-500x500.png"
                             alt="Third slide"
                         />
-                        <Carousel.Caption>
-                            <h3>ELECTRIC SCOOTER</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <Carousel.Caption className='mb-5 px-5'>
+                            <h3 className='mb-4 fw-bold'>ELECTRIC SCOOTER</h3>
+                            <p>The All Rounder GSX 125 - from the great combination of the GSX & SCOOTER Series.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
