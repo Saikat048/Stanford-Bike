@@ -1,6 +1,6 @@
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import React, { useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, Spinner } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom'; 
 import { ToastContainer, toast } from 'react-toastify';
@@ -18,14 +18,19 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    // Email 
     const handleEmailBlur = event => {
         setEmail(event.target.value);
     }
+
+    // Password 
     const handlePasswordBlur = event => {
         setPassword(event.target.value);
     }
     const [signInWithEmailAndPassword, user, loading ] = useSignInWithEmailAndPassword(auth);
 
+
+    // From Submit 
     const handleSubmit = event => {
         event.preventDefault();
 
@@ -38,28 +43,25 @@ const Login = () => {
     if (user) {
         navigate(from, { replace: true })
     }
+ 
 
-    // if (error) {
-    //     return (
-    //         <p className='text-danger error'>{error.message}</p>
-    //     );
-    // }
+    // Reset Password 
 
-    const [sendPasswordResetEmail, sending ] = useSendPasswordResetEmail(
-        auth
-      );
+    const [sendPasswordResetEmail, sending ] = useSendPasswordResetEmail( auth );
     const handleResetPassword =async () => {
         await sendPasswordResetEmail(email);
         toast('Sent email');
-      }
+      } 
 
-      if (sending) {
-        return <h1 className='text-center mt-5'>Sending...</h1>;
+    //   Spinner 
+      if (loading) {
+        return <span className='d-flex mx-auto justify-content-center mt-5'><Spinner animation="border" variant="primary" /></span> ;
       }
-
 
       
- 
+
+    //   Sign in with google 
+
       const provider = new GoogleAuthProvider();
 
       if(users){

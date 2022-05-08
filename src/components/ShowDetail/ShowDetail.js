@@ -19,7 +19,9 @@ const ShowDetail = () => {
 
     }, [product])
 
-    // const [quantity, setQuantity] = useState([]);
+
+    
+    // Quantity updata 
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -30,9 +32,7 @@ const ShowDetail = () => {
             return;
         }
         const quantity = { number };
-
         const url = `https://blooming-refuge-59284.herokuapp.com/products/${inventoryId}`;
-
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -45,12 +45,14 @@ const ShowDetail = () => {
                 setProduct(data);
                 event.target.reset();
             })
-
     }
+
+
+    // Quantity minus 
 
     const handleDeliver = () => {
         const number = parseInt(product.quantity) - 1;
-        const update = {number}
+        const update = { number }
 
         const url = `https://blooming-refuge-59284.herokuapp.com/products/${inventoryId}`;
 
@@ -63,7 +65,7 @@ const ShowDetail = () => {
         })
             .then(response => response.json())
             .then(data => {
-                setProduct(data); 
+                setProduct(data);
             })
     }
 
@@ -82,10 +84,10 @@ const ShowDetail = () => {
                             <Button variant="primary" type="submit">Add</Button>
                             {
                                 product.quantity === 0 ? <Button className='ms-3 ' variant="danger">Slot Out</Button>
-                                :
-                                <Button onClick={handleDeliver} className='ms-3 ' variant="primary">Delivered</Button>
+                                    :
+                                    <Button onClick={handleDeliver} className='ms-3 ' variant="primary">Delivered</Button>
                             }
-                            
+
                         </Form>
                     </Card>
 

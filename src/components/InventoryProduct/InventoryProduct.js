@@ -13,6 +13,10 @@ const InventoryProduct = (props) => {
         navigate(`/inventory/${id}`)
     } 
 
+
+
+    // select item 
+    
     const handleSelect = item => {
         console.log(item)
         fetch('https://blooming-refuge-59284.herokuapp.com/item', {

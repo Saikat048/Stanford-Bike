@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, Spinner } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import './Signup.css'
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -14,22 +14,27 @@ const Signup = () => {
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
-
+    // Email 
     const handleEmailBlur = event => {
         setEmail(event.target.value);
     }
+    // Password 
     const handlePasswordBlur = event => {
         setPassword(event.target.value);
     }
+    // Confirm Password 
     const handleConfirmPasswordBlur = event => {
         setConfirmPassword(event.target.value);
     }
+
     const [createUserWithEmailAndPassword, user, loading] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
 
-    const handleSubmit = event => {
-        event.preventDefault();
 
+    // Create user with email and password
+
+    const handleSubmit = event => {
+        event.preventDefault(); 
         if (password !== confirmPassword) {
             setError('Password did not match')
             return;
@@ -39,6 +44,7 @@ const Signup = () => {
             return;
         }
         createUserWithEmailAndPassword(email, password)
+
         // emailVerification
         sendEmailVerification();
     }
@@ -47,6 +53,11 @@ const Signup = () => {
         navigate('/home')
     }
 
+    // Spinner 
+    
+    if (loading) {
+        return <span className='d-flex mx-auto justify-content-center mt-5'><Spinner animation="border" variant="primary" /></span>;
+    }
     return (
         <div>
             <div className='container'>
@@ -74,7 +85,7 @@ const Signup = () => {
                         </Form>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
     );
 };
