@@ -5,16 +5,15 @@ Live Web Site
 
 
 ### Description 
-Aei website ta ekta bike related website. Ki vabe website A bike er details dekha dey, pochondo moto bike select kora jay, proyojone bike details delete ooo kora jay abar bike stock kora jay, bike add kora jay A golo eee aei website A dekhano hoyeche.
+ This website is a bike related wevsite. How to know about bides on the website, bikes can be selected as desired, bike details can be deleted if necessary, bikes can be stocked, bikes can be added. These are the ones shown on the site.
 
-## Assalamu Alaikum Admin/Moderator
-- Prothome create react app diye ekta react app create korchi. kicu components create korchi. 
-- App.js file A router set korchi. ekta header create korchi, header A link golo set korchi. Home page A carousel + item section + extra 2 ta section (bike center, suzuki care) + footer.
-- User jodi log in kora thake ta hole item detail A jete parbe R jodi log in kora na thake ta hole log in page A niye jabe. User login kora thekle Header er modde 2 ta page (My item and Add item) A jete parbe. User item A thaka joto golo select button A click korbe toto golo item My item A add hobe. My item page A item golo delete korar option ache (code sob thik ache, delete korle deletedCount 1 na hoye 0 hoy, server console.log hoy thik moto but database theke item delete hoy na. onek try korar pore ooo ata solve korte pari nai). Abar Add item A giye joto golo new item add korbe sob golo Manage Items A add hobe.
-- User jodi sign up kora na thake ta hole log in page A sign up er link deya ache, sekhane giye email, password diye othoba 'sign in with google' diye ooo sign up korte parbe. Sign up er somoy user email A email verification code jabe tarpor user K tar email ta verify kore nite hobe. User log in er por password vule gele password reset kore nite parbe. 
-- User log in chara home, manage items, blogs pages A jete pabe. Footer section ta shudho home, manage items, R blogs section A dekhano hoyeche.
+## Assalamu Alaikum 
+- First I am creating an app with cteate react app. I am creating some components. 
+- Setting the router in the App.js file. Creating a header, setting some links in the header. Home page Carousel + Item Section + Extra 2 section ( Bike Center, Suzuki Care ) + Footer.
+- If the user is logged in then the item can go to details and fi not logged in then the user will be taken to the login page. If the user is logged in, He can go to 2 pages ( My Item and Add Item ) in the header. The more clicks on the select button in the user item, the more items will be added to my item. There is an option to delete the items on the My Items page. Go to the Add Items page again and add all the new items to the Manage Items page.
+- If the user has not signed up then there is a link to sign up with email, password or sign in with Google. After signing up, an email verificaction message will be sent to the user's email, then the uset will have to verify his email. If the user forgers hos password, He will be able to reset the password.
+- Users can go to home, manage items, blogs page without logging in.
 
 
-
-### Web Site ta create korte ja ja use kora hoyeche...... 
+### What has been used to create the website...... 
 Bootstrap, Firebase, React-Bootstrap, React-Firebase-Hooks, React-Hook-Form, React-Icons, React-Loader-Spinner, React-Router, React-Toastify, etc.
